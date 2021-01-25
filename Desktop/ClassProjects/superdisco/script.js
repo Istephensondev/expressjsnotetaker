@@ -7,6 +7,9 @@ document.getElementById("currentDay").innerHTML = currentDay;
 var nine = moment().hour(9)
 
 
+
+
+
 function colorUpdater() {
     var currentTime = moment().hours()
     $('.time-block').each(function () {
@@ -28,4 +31,7 @@ function colorUpdater() {
 colorUpdater()
 
 var description = $(this).siblings(".description").val()
+var time = $
 console.log(description)
+
+localStorage.setItem(time, text);

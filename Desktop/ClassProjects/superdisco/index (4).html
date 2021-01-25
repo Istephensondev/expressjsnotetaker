@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- imports all of the remote .css files -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <!-- container for the workday planner rows -->
+    <div class="container">
+      <!-- Timeblocks go here -->
+      <!-- 9am Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">9AM</div>
+            <textarea id="txt9" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn9am"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 10am Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">10AM</div>
+            <textarea id="txt10" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn10am"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 11am Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">11AM</div>
+        <!-- textarea used for input and saving/loading localstorage items -->
+            <textarea id="txt11" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn11am"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 12pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">12PM</div>
+        <!-- textarea used for input and saving/loading localstorage items -->
+            <textarea id="txt12" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn12pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 1pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">1PM</div>
+        <!-- textarea used for input and saving/loading localstorage items -->
+            <textarea id="txt13" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn1pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 2pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">2PM</div>
+        <!-- textarea used for input and saving/loading localstorage items -->
+            <textarea id="txt14" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn2pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 3pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">3PM</div>
+        <!-- textarea used for input and saving/loading localstorage items -->
+            <textarea id="txt15" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn3pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 4pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">4PM</div>
+        <!-- textarea used for input and saving/loading localstorage items -->
+            <textarea id="txt16" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn4pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 5pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">5PM</div>
+        <!-- textarea used for input and saving/loading localstorage items -->
+            <textarea id="txt17" class="col-10" placeholder="Nothing scheduled"></textarea>
+            <!-- button saves the user input text in textarea above -->
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn5pm"><i class="fas fa-save"></i></button>
+      </li>
+    <!-- imports the remote APIs and the local javascript file -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
