@@ -1,11 +1,13 @@
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var morgan = require('morgan');
-var User = require('./models/user');
+// var User = require('./models/user');
+var Student = require('./models/student');
 var hbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var express = require('express');
 var path = require('path');
+var sequelize = require('./config/connection');
 
 var app = express();
 app.set('port', 9000);
@@ -56,7 +58,7 @@ app.route('/signup')
         res.render('signup', hbsContent);
     })
     .post((req, res) => {
-        User.create ({
+        Student.create ({
             username: req.body.username,
             password: req.body.password,
         })
@@ -122,4 +124,8 @@ app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that!")
 });
 
-app.listen(app.get('port'), () => console.log(`App started on port ${app.get('port')}`));
+// app.listen(app.get('port'), () => console.log(`App started on port ${app.get('port')}`));
+
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log('Now listening'));
+  });
